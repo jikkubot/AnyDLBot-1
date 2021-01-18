@@ -2,16 +2,16 @@ import asyncio
 from datetime import datetime
 
 
-@bot.on(admin_cmd(pattern="ping$"))
-@bot.on(sudo_cmd(pattern="ping$", allow_sudo=True))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["ping"]))
 async def _(event):
-    if event.fwd_from:
-        return
+TRChatBase(update.from_user.id, update.text, "/ping")
+    await bot.send_message(
     start = datetime.now()
     event = await edit_or_reply(event, "Pong!")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit("Pong!\n`{}`".format(ms))
+    )
 
 
 @bot.on(admin_cmd(pattern=f"fping$", outgoing=True))
