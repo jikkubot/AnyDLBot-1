@@ -5,8 +5,12 @@ from pyrogram import Client, Filters
 
 
 @Client.on_message(Filters.command(["ping", "ping@xploaderprobot"]))
-async def ping(client, message):
-    start = datetime.now()
-    end = datetime.now()
-    ms = (end - start).microseconds
-    await message.reply_text("Pingy Pongy!\n`{}`".format(ms))
+async def ping(update, context):
+    start_time = int(round(time.time() * 1000))
+    reply = sendMessage("Starting Ping", context.bot, update)
+    end_time = int(round(time.time() * 1000))
+    editMessage(f'{end_time - start_time} ms', reply)
+    
+    
+    
+    
