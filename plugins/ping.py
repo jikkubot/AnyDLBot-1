@@ -9,7 +9,7 @@ async def ping(client, message):
     start_time = int(round(time.time() * 1000))
     await message.reply_text("Starting Ping")
     end_time = int(round(time.time() * 1000))
-    await message.reply_text(f'{end_time - start_time} ms')
+    await message.edit_text(f'{end_time - start_time} ms')
     
     
     
