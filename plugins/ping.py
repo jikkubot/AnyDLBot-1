@@ -4,7 +4,7 @@ from datetime import datetime
 from pyrogram import Client, Filters
 
 
-@Client.on_message(Filters.command(["ping", "ping@xploaderprobot]))
+@Client.on_message(Filters.command(["ping", "ping@xploaderprobot"]))
 async def ping(client, message):
     start = datetime.now()
     end = datetime.now()
