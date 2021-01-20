@@ -8,4 +8,4 @@ async def ping(client, message):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await message.reply_text("Pong!\n`{}`".format(ms))
+    await message.reply_text("Pingy Pongy!\n`{}`".format(ms))
