@@ -4,7 +4,7 @@ from pyrogram import Client, Filters
 
 
 @Client.on_message(Filters.command(["ping"]))
-async def start(client, message):
+async def ping(client, message):
     start = datetime.now()
     event = await reply_text(event, "Pong!")
     end = datetime.now()
