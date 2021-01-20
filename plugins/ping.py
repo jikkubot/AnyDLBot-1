@@ -8,5 +8,5 @@ from pyrogram import Client, Filters
 async def ping(client, message):
     start = datetime.now()
     end = datetime.now()
-    ms = (end - start).microseconds / 1000
+    ms = (end - start).microseconds
     await message.reply_text("Pingy Pongy!\n`{}`".format(ms))
