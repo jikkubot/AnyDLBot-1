@@ -9,7 +9,7 @@ async def ping(bot, message):
     start_time = int(round(time.time() * 1000))
     event = await message.reply_text("Starting Ping")
     end_time = int(round(time.time() * 1000))
-    await bot.edit_message(f'{end_time - start_time} ms', event)
+    await bot.edit_message_text(text=f'{end_time - start_time} ms', event)
     
     
     
